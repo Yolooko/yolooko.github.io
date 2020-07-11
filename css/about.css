@@ -1,0 +1,99 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.content span {
+  color: #00a5f1;
+  padding: 20px 35px;
+  font-weight: 800;
+  font-size: 40px;
+}
+.content .block {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 40px;
+  padding: 10px;
+  border: 3px solid #160C28;
+}
+.content .block .blockText {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.content .block .blockText p:nth-child(1) {
+  font-size: 40px;
+  color: #160C28;
+  font-weight: 700;
+}
+.content .block .blockText p:nth-child(2) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .block .blockText p:nth-child(3) {
+  font-size: 24px;
+  color: #160C28;
+  font-weight: 400;
+}
+.content .block .blockText p img {
+  height: 40px;
+  width: 40px;
+  padding: 40px;
+}
+.content .block img {
+  height: 400px;
+}
+.content .block:nth-child(even) .blockText {
+  order: 1;
+}
+.content .block:nth-child(even) .blockText p:nth-child(3) {
+  padding-right: 15px;
+}
+.content .block:nth-child(even) > img {
+  order: 2;
+}
+.content .block:nth-child(odd) .blockText {
+  order: 2;
+}
+.content .block:nth-child(odd) .blockText p:nth-child(3) {
+  padding-left: 15px;
+}
+.content .block:nth-child(odd) > img {
+  order: 1;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    align-items: center;
+  }
+  .content span {
+    padding-top: 40px;
+  }
+  .content .block {
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 90%;
+    margin: 0px;
+  }
+  .content .block p:nth-child(1) {
+    order: 1;
+    text-align: center;
+  }
+  .content .block p:nth-child(2) {
+    order: 3;
+  }
+  .content .block p:nth-child(3) {
+    order: 4;
+  }
+  .content .block .photo {
+    order: 2;
+    padding: 0px;
+    padding-top: 15px;
+    width: 80%;
+    height: auto;
+  }
+}

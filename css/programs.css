@@ -1,0 +1,42 @@
+.title_text {
+  border: 3px solid #9c07af;
+  padding: 20px;
+  margin: 20px;
+  font-weight: 800;
+  font-size: 20px;
+
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 30px 20px;
+  padding: 40px 10px;
+}
+.content .variant {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+.content .variant p:nth-child(1), .content .variant p:nth-child(3) {
+  font-size: 30px;
+  font-weight: 600;
+}
+.content .variant p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 20px 0px 20px 15px;
+}
+.content .variant:nth-child(odd) {
+  background: #3fdcf8;
+  color: #102542;
+}
+.content .variant:nth-child(even) {
+  background: #37fa72;
+  color: #160C28;
+}
+.content .variant:hover {
+  border-color: #102542;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+

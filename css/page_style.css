@@ -1,0 +1,230 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+.header {
+  background: #17A2B8;
+}
+.header .mobileMenu .menuIcon {
+  position: absolute;
+  background: #02c4f5;
+  width: 90px;
+  height: 90px;
+  right: 15px;
+  top: 15px;
+}
+.header .mobileMenu .menuIcon .sticks, .header .mobileMenu .menuIcon .sticks::before, .header .mobileMenu .menuIcon .sticks::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background: #102542;
+  width: 70px;
+  height: 10px;
+}
+.header .mobileMenu .menuIcon .sticks::after {
+  position: absolute;
+  left: 0px;
+  top: -20px;
+}
+.header .mobileMenu .menuIcon .sticks::before {
+  position: absolute;
+  left: 0px;
+  top: 20px;
+}
+
+.footer {
+  background: #135050;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #FFFFFF;
+}
+.footer p {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px 10px 5px 10px;
+}
+
+.goTop .goTopCircle {
+  display: block;
+  content: "";
+  opacity: 0.7;
+  position: fixed;
+  top: 80px;
+  right: 40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  background: #0ebce7;
+  z-index: 9999;
+}
+.goTop .goTopCircle .arrow::before, .goTop .goTopCircle .arrow::after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 43%;
+  top: 33px;
+  width: 50px;
+  height: 14px;
+  border-radius: 100px;
+  transform: rotate(35deg);
+  background: #eb2806;
+}
+.goTop .goTopCircle .arrow::after {
+  left: 17%;
+  transform: rotate(-215deg);
+}
+.goTop .goTopCircle .arrow:nth-child(2)::before, .goTop .goTopCircle .arrow:nth-child(2)::after {
+  top: 65px;
+}
+
+@media (min-width: 1100px) {
+  .breaker, .header .cab .login::before, .header .nav a:nth-child(2)::before, .header .nav a:nth-child(2)::after, .header .nav a:nth-child(4)::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 3px;
+    height: 40px;
+    background: #FFFFFF;
+  }
+
+  .header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 20px;
+  }
+  .header .mobileMenu .menuIcon {
+    display: none;
+  }
+  .header .nav {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .header .nav a {
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 40px;
+  }
+  .header .nav a:nth-child(1) {
+    width: 25%;
+  }
+  .header .nav a:nth-child(2) {
+    width: 25%;
+  }
+  .header .nav a:nth-child(3) {
+    width: 25%;
+  }
+  .header .nav a:nth-child(4) {
+    width: 25%;
+  }
+  .header .nav a:nth-child(2)::after {
+    left: -35px;
+    top: 4px;
+  }
+  .header .nav a:nth-child(2)::before {
+    right: 0px;
+    top: 4px;
+  }
+  .header .nav a:nth-child(4)::before {
+    left: 20px;
+    top: 4px;
+  }
+
+  .header .nav a {
+    color: #ffffff;
+  }
+  .header .nav a:hover {
+    color: #37e901;
+  }
+  .header .cab {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+  }
+  .header .cab p {
+    color: #FFFFFF;
+    padding-bottom: 8px;
+    text-align: right;
+  }
+}
+@media (max-width: 1100px) {
+  .header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 2px;
+  }
+  .header::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 320px;
+    top: 100px;
+    left: 0px;
+    background: #8efcd2;
+    z-index: 900;
+  }
+  .header .mobileMenu .menuIcon {
+    display: block;
+  }
+  .header .nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .header .nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 400;
+    z-index: 9999;
+    padding-bottom: 25px;
+  }
+ 
+  .header .nav a:hover {
+    color: #37e901;
+  }
+  .header .cab {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-top: 30px;
+    position: relative;
+    z-index: 9998;
+  }
+  .header .cab::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -webkit-calc(50% - 150px);
+    background: #102542;
+    width: 300px;
+    height: 5px;
+  }
+  .header .cab p {
+    color: #102542;
+    padding-bottom: 15px;
+    font-size: 24px;
+  }
+}
